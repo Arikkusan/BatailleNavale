@@ -1,0 +1,15 @@
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\bin\Debug\net7.0\BatailleNaval.exe
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\bin\Debug\net7.0\BatailleNaval.deps.json
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\bin\Debug\net7.0\BatailleNaval.runtimeconfig.json
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\bin\Debug\net7.0\BatailleNaval.dll
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\bin\Debug\net7.0\BatailleNaval.pdb
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\BatailleNaval.csproj.AssemblyReference.cache
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\BatailleNaval.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\BatailleNaval.AssemblyInfoInputs.cache
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\BatailleNaval.AssemblyInfo.cs
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\BatailleNaval.csproj.CoreCompileInputs.cache
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\BatailleNaval.dll
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\refint\BatailleNaval.dll
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\BatailleNaval.pdb
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\BatailleNaval.genruntimeconfig.cache
+C:\Users\jauge\RiderProjects\BatailleNaval\BatailleNaval\obj\Debug\net7.0\ref\BatailleNaval.dll
