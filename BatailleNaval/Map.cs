@@ -20,52 +20,73 @@ public class Map
         }
     }
 
-    public void showMap()
+
+    public static void ShowMaps(Map leftMap, Map rightMap)
     {
-        Console.WriteLine("        ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐");
-        Console.WriteLine("        │ A │ B │ C │ D │ E │ F │ G │ H │ I │ J │");
-        Console.WriteLine("    ┌───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤");
+        Console.WriteLine(
+            "        ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐      │          ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐");
+        Console.WriteLine(
+            "        │ A │ B │ C │ D │ E │ F │ G │ H │ I │ J │      │          │ A │ B │ C │ D │ E │ F │ G │ H │ I │ J │");
+        Console.WriteLine(
+            "    ┌───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤      │      ┌───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤");
 
 
         for (int i = 0; i < 10; i++)
         {
+            Console.Write("    ");
+
             for (int j = 0; j < 10; j++)
             {
-                if (j == 0)
-                {
-                    Console.Write("    │ " + i + " ");
-                }
+                leftMap.WriteCell(i, j);
+            }
 
-                if (boatMap[i, j].isUsed)
-                {
-                    if (boatMap[i, j].isTouched)
-                    {
-                        Console.Write("│ O ");
-                    }
-                    else
-                    {
-                        Console.Write("│ X ");
-                    }
-                }
-                else
-                {
-                    Console.Write("│   ");
-                }
+            Console.Write("│");
+            Console.Write("      │      ");
+
+            for (int j = 0; j < 10; j++)
+            {
+                rightMap.WriteCell(i, j);
             }
 
             Console.Write("│");
             Console.WriteLine();
+
             if (i == 9)
             {
-                Console.WriteLine("    └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘");
+                Console.WriteLine(
+                    "    └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘      │      └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘");
             }
             else
-                Console.WriteLine("    ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤");
+            {
+                Console.WriteLine(
+                    "    ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤      │      ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤");
+            }
         }
     }
 
-    public static void separatingLine()
+    private void WriteCell(int i, int j)
     {
-        Console.WriteLine("─────────────────────────────────────────────────────");
+        
+        if (j == 0)
+        {
+            Console.Write("│ " + i + " ");
+        }
+
+
+        if (boatMap[i, j].isUsed)
+        {
+            if (boatMap[i, j].isTouched)
+            {
+                Console.Write("│ O ");
+            }
+            else
+            {
+                Console.Write("│ X ");
+            }
+        }
+        else
+        {
+            Console.Write("│ A ");
+        }
     }
 }

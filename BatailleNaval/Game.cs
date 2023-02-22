@@ -11,4 +11,17 @@ public class Game
     {
         
     }
+
+    public void Start()
+    {
+        DrawGameMap();
+    }
+
+    private void DrawGameMap()
+    {
+        Map m = new Map();
+        m.initMap();
+        
+        Map.ShowMaps(m, m);
+    }
 }
