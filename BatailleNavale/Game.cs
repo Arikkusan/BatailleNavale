@@ -8,8 +8,8 @@ public class Game
     public static Player Bot;
     public static Player Player;
 
-    private Map _botMap = Bot.map;
-    private Map _userMap = Player.map;
+    private Map _botMap;
+    private Map _userMap;
     private int _roundCount;
     private static bool _multiplayer;
 
@@ -17,6 +17,8 @@ public class Game
     public Game()
     {
         _roundCount = 0;
+        this._botMap = new Map();
+        this._userMap = new Map();
      
         
         

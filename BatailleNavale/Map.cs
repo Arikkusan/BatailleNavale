@@ -124,7 +124,7 @@ public class Map
              */
         }
 
-        throw new NotImplementedException();
+        // throw new NotImplementedException();
     }
 
     private void PlaceBoatsByPlayer()
@@ -138,6 +138,6 @@ public class Map
          * quelle 
          * 
          */
-        throw new NotImplementedException();
+        // throw new NotImplementedException();
     }
 }

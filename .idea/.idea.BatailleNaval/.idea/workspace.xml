@@ -5,77 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7ac7f73-9fe6-45ef-8a27-75ba1bc69172" name="Changes" comment="IHM 2 parties gauche droite">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNavale/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNavale/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNavale/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNavale/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNavale/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNavale/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/Boat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/Game.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/ref/BatailleNaval.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/refint/BatailleNaval.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval.sln" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNaval.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/BatailleNaval.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/BatailleNavale.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/Boat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/Case.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Case.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/Coordinates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Coordinates.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/Game.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Map.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/bin/Debug/net7.0/BatailleNaval.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNaval.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/bin/Debug/net7.0/BatailleNaval.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/bin/Debug/net7.0/BatailleNaval.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNaval.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/bin/Debug/net7.0/BatailleNaval.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/bin/Debug/net7.0/BatailleNaval.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNaval.runtimeconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/BatailleNaval.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNaval.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/BatailleNaval.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNaval.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/BatailleNaval.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNaval.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.GlobalUsings.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.GlobalUsings.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNaval.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/BatailleNaval.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/ref/BatailleNaval.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/Debug/net7.0/refint/BatailleNaval.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNaval/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2M5V0GkmF0i5gjGrRXuQbO1sGH7" />
@@ -86,25 +39,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\jauge\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\jauge\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\jauge\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Alix Jaugey\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BatailleNaval" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -136,6 +89,7 @@
       <workItem from="1677057212226" duration="3805000" />
       <workItem from="1677069275127" duration="5882000" />
       <workItem from="1677076161218" duration="4043000" />
+      <workItem from="1677284455144" duration="280000" />
     </task>
     <task id="LOCAL-00001" summary="oui">
       <created>1677072625523</created>
