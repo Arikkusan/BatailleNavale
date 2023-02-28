@@ -3,8 +3,6 @@ public class Boat
 {
     private int _size; // longueur du bateau (nombre de case utilisée par celui ci)
     private int _touchCount; // nombre de fois touchées
-    private Coordinates _cooStart; 
-    private Coordinates _cooEnd;
 
     public int Size
     {
@@ -23,13 +21,16 @@ public class Boat
                 _size = value;
         }
     }
-    
-    public Boat(int size, Coordinates startCoo, Coordinates cooEnd)
+
+    public Boat(int size)
     {
         Size = size;
         _touchCount = 0;
-        this._cooStart = startCoo;
-        this._cooEnd = cooEnd;
+    }
+
+    public void Touch()
+    {
+        _touchCount++;
     }
 
     public bool IsAlive()

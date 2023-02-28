@@ -4,28 +4,44 @@
     <projectFile>BatailleNaval/BatailleNaval.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7ac7f73-9fe6-45ef-8a27-75ba1bc69172" name="Changes" comment="IHM 2 parties gauche droite">
+    <list default="true" id="a7ac7f73-9fe6-45ef-8a27-75ba1bc69172" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BatailleNavale/Utils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/Boat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Boat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/Case.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Case.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/Coordinates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Coordinates.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Game.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/ref/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/ref/BatailleNavale.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/refint/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/refint/BatailleNavale.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="IKU" />
+      </map>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/59c0c99d9dbd54ebe2f8cc4a807edc377e1090f4f7d96e9a246de9cba61748e0/TextWriter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6879c9ed20391a5ccfea363be5964fbcfe4f1dfde9558aa84b36df6b6ec92c6/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6bfb5caa34a165fe407ffb9d2b7285ffa682b2e3eb1f4f18fb6a945a576c4/Random.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6ded3f6ae7aed8c9d21c26124d94ad0cc21728e56793485dc472863d26eeaeb/StreamWriter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d43fa890c7fc70c8ba3d3d33ee567045a39b9710f73b3ced707d8ab62d83/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db4df86ddb39afb7d95742baab6b2cd3f49e78e518bf7a84e7a66bc45585ff/Interop.BCryptGenRandom.GetRandomBytes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb643aeff3db18a0c8fc3f6dec4c87a694229c8c871b5f71d8a852177e473d7f/Random.Xoshiro256StarStarImpl.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -39,25 +55,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ReSpellerSettingsId",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Alix Jaugey\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Alix Jaugey\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="BatailleNaval" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -90,6 +106,13 @@
       <workItem from="1677069275127" duration="5882000" />
       <workItem from="1677076161218" duration="4043000" />
       <workItem from="1677284455144" duration="280000" />
+      <workItem from="1677440580080" duration="104000" />
+      <workItem from="1677482376300" duration="261000" />
+      <workItem from="1677483327852" duration="920000" />
+      <workItem from="1677488524153" duration="4162000" />
+      <workItem from="1677500994335" duration="5935000" />
+      <workItem from="1677569325634" duration="2839000" />
+      <workItem from="1677590924922" duration="1977000" />
     </task>
     <task id="LOCAL-00001" summary="oui">
       <created>1677072625523</created>
@@ -112,7 +135,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677076928473</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="a">
+      <created>1677440634931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677440634931</updated>
+    </task>
+    <task id="LOCAL-00005" summary="a">
+      <created>1677440676232</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677440676232</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +163,26 @@
     <MESSAGE value="oui" />
     <MESSAGE value="initCommit" />
     <MESSAGE value="IHM 2 parties gauche droite" />
-    <option name="LAST_COMMIT_MESSAGE" value="IHM 2 parties gauche droite" />
+    <MESSAGE value="a" />
+    <option name="LAST_COMMIT_MESSAGE" value="a" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BatailleNavale/Map.cs</url>
+          <line>132</line>
+          <properties documentPath="C:\Users\Alix Jaugey\Documents\Projets - CS\TP02\BatailleNavale\BatailleNavale\Map.cs" initialLine="132" containingFunctionPresentation="method 'PlaceBoatBySize'">
+            <startOffsets>
+              <option value="3220" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3221" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
