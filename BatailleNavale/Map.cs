@@ -163,7 +163,6 @@ public class Map
                     // pour chaques cellules en partant à l'arrière du point aléatoire
                     for (int i = x; i > x - boatSize; i--)
                     {
-                        Console.WriteLine("X " + i);
                         
                         // si case utilisée alors
                         if (m.GetCase(i, y).isUsed)
@@ -183,7 +182,6 @@ public class Map
                 {
                     for (int i = x; i < x + boatSize; i++)
                     {
-                        Console.WriteLine("X " + i);
                         if (m.GetCase(i, y).isUsed)
                         {
                             possibleFront = false;
@@ -203,7 +201,6 @@ public class Map
                 {
                     for (int i = y; i > y - boatSize; i--)
                     {
-                        Console.WriteLine("y " + i);
                         if (m.GetCase(x, i).isUsed)
                         {
                             possibleBack = false;
@@ -220,7 +217,6 @@ public class Map
                 {
                     for (int i = y; i < y + boatSize; i++)
                     {
-                        Console.WriteLine("y " + i);
                         if (m.GetCase(x, i).isUsed)
                         {
                             possibleFront = false;
@@ -272,12 +268,10 @@ public class Map
                 {
                     if (orientation == 0) // horizontal
                     {
-                        Console.WriteLine("x O " + (x - i));
                         cases.Add(m.GetCase(x - i, y));
                     }
                     else if (orientation == 1) // vertical
                     {
-                        Console.WriteLine("y O " + (y - i));
                         cases.Add(m.GetCase(x, y - i));
                     }
                 }
@@ -288,12 +282,10 @@ public class Map
                 {
                     if (orientation == 0)
                     {
-                        Console.WriteLine("X O " + (x + i));
                         cases.Add(m.GetCase(x + i, y));
                     }
                     else if (orientation == 1)
                     {
-                        Console.WriteLine("Y O " + (y + i));
                         cases.Add(m.GetCase(x, y + i));
                     }
                 }

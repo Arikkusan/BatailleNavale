@@ -1,12 +1,8 @@
-﻿using System.Runtime.InteropServices.JavaScript;
-using BatailleNavale;
-
-namespace BatailleNavale;
+﻿namespace BatailleNavale;
 
 public class Game
 {
     public static Game Instance;
-    public const int BoatCount = 15;
     private Player Bot;
     private Player User;
 
