@@ -163,7 +163,6 @@ public class Map
                     // pour chaques cellules en partant à l'arrière du point aléatoire
                     for (int i = x; i > x - boatSize; i--)
                     {
-                        
                         // si case utilisée alors
                         if (m.GetCase(i, y).isUsed)
                         {
@@ -242,7 +241,7 @@ public class Map
                     throw new Exception("Cell Error attention");
                 }
             }
-    
+
             // on vide la liste utilisée plus tôt
             cases.Clear();
 
@@ -293,14 +292,13 @@ public class Map
 
             // on créé le nouveau bateau
             Boat b = new Boat(boatSize);
-            
+
             // on l'ajoute à la liste de bateaux du joueur
             p.boats.Add(b);
-            
+
             foreach (var cell in cases)
             {
                 cell.Boat = b;
-                
             }
         }
         else PlaceBoatBySize(boatSize);
@@ -318,5 +316,33 @@ public class Map
          * 
          */
         // throw new NotImplementedException();
+    }
+
+    public bool touchable(int x, int y)
+    {
+        return !_boatMap[x, y].isTouched;
+    }
+
+    public e attack(int x, int y)
+    {
+        if (_boatMap[x, y].isUsed)
+        {
+            _boatMap[x, y].isTouched = true;
+            _boatMap[x, y].Boat.Touch();
+        }
+        else
+            return e.RIEN;
+
+        if (_boatMap[x, y].Boat.IsAlive())
+            return e.TOUCHE;
+
+        
+        return e.COULE;
+    }
+
+    public bool boatAlive(int x, int y)
+    {
+        Boat b = _boatMap[x, y].Boat;
+        return b.IsAlive();
     }
 }
