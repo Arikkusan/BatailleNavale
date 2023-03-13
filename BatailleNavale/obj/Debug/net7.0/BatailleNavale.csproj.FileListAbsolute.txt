@@ -13,3 +13,18 @@ C:\Users\Alix Jaugey\Documents\Projets - CS\TP02\BatailleNavale\BatailleNavale\o
 C:\Users\Alix Jaugey\Documents\Projets - CS\TP02\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.pdb
 C:\Users\Alix Jaugey\Documents\Projets - CS\TP02\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.genruntimeconfig.cache
 C:\Users\Alix Jaugey\Documents\Projets - CS\TP02\BatailleNavale\BatailleNavale\obj\Debug\net7.0\ref\BatailleNavale.dll
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.exe
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.deps.json
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.runtimeconfig.json
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.dll
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.pdb
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.csproj.AssemblyReference.cache
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.AssemblyInfoInputs.cache
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.AssemblyInfo.cs
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.csproj.CoreCompileInputs.cache
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.dll
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\refint\BatailleNavale.dll
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.pdb
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.genruntimeconfig.cache
+D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\ref\BatailleNavale.dll

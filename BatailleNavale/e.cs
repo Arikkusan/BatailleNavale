@@ -4,6 +4,7 @@ public enum e
 {
     RIEN,
     TOUCHE,
-    COULE
+    COULE,
+    RATE
     
 }

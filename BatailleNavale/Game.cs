@@ -26,7 +26,7 @@ public class Game
         _userMap = User.map;
         
         _botMap.PlaceBoats(false);
-        _userMap.PlaceBoats(true);
+        _userMap.PlaceBoats(false);
 
 
         Start();
@@ -34,6 +34,8 @@ public class Game
 
     private void Start()
     {
+        DrawGameMap();
+        Bot.AttackAuto(User);
         DrawGameMap();
     }
 

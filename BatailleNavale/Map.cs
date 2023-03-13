@@ -1,6 +1,4 @@
-﻿using BatailleNavale;
-
-namespace BatailleNavale;
+﻿namespace BatailleNavale;
 
 public class Map
 {
@@ -111,6 +109,7 @@ public class Map
             PlaceBoatsByPlayer();
         else
             PlaceBoatsAuto();
+        
     }
 
     private void PlaceBoatsAuto()
@@ -344,5 +343,18 @@ public class Map
     {
         Boat b = _boatMap[x, y].Boat;
         return b.IsAlive();
+    }
+
+    public bool boatIsAlive(int x, int y)
+    {
+        bool alive = false;
+        if (_boatMap[x, y].isUsed)
+        {
+            if (_boatMap[x, y].Boat.IsAlive())
+            {
+                alive = true;
+            }
+        }
+        return alive;
     }
 }
