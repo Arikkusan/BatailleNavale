@@ -324,6 +324,7 @@ public class Map
 
     public e attack(int x, int y)
     {
+        Console.WriteLine("Le bot attaque la case"+ x + " " + y);
         if (_boatMap[x, y].isUsed)
         {
             _boatMap[x, y].isTouched = true;
@@ -338,8 +339,6 @@ public class Map
         if (_boatMap[x, y].Boat.IsAlive())
             return e.TOUCHE;
         return e.COULE;
-
-        
     }
 
     public bool boatAlive(int x, int y)

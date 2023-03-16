@@ -22,8 +22,6 @@
       <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/ref/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/ref/BatailleNavale.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/refint/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/refint/BatailleNavale.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" afterDir="false" />
@@ -40,20 +38,6 @@
         <entry key="$PROJECT_DIR$" value="IKU" />
       </map>
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/59c0c99d9dbd54ebe2f8cc4a807edc377e1090f4f7d96e9a246de9cba61748e0/TextWriter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6879c9ed20391a5ccfea363be5964fbcfe4f1dfde9558aa84b36df6b6ec92c6/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6bfb5caa34a165fe407ffb9d2b7285ffa682b2e3eb1f4f18fb6a945a576c4/Random.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6ded3f6ae7aed8c9d21c26124d94ad0cc21728e56793485dc472863d26eeaeb/StreamWriter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d43fa890c7fc70c8ba3d3d33ee567045a39b9710f73b3ced707d8ab62d83/Console.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db4df86ddb39afb7d95742baab6b2cd3f49e78e518bf7a84e7a66bc45585ff/Interop.BCryptGenRandom.GetRandomBytes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb643aeff3db18a0c8fc3f6dec4c87a694229c8c871b5f71d8a852177e473d7f/Random.Xoshiro256StarStarImpl.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Map.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Player (1).cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/e.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TP03_POO/TP03_POO/Product.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,14 +59,14 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Alix Jaugey\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\flyde\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\flyde\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\flyde\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -127,8 +111,9 @@
       <workItem from="1677590924922" duration="2045000" />
       <workItem from="1677671427004" duration="2399000" />
       <workItem from="1678288573130" duration="3858000" />
-      <workItem from="1678712481920" duration="2406000" />
-      <workItem from="1679000129242" duration="963000" />
+      <workItem from="1678712481920" duration="2393000" />
+      <workItem from="1678998215824" duration="1834000" />
+      <workItem from="1679006962708" duration="777000" />
     </task>
     <task id="LOCAL-00001" summary="oui">
       <created>1677072625523</created>
@@ -179,14 +164,7 @@
       <option name="project" value="LOCAL" />
       <updated>1678712745115</updated>
     </task>
-    <task id="LOCAL-00008" summary="oui">
-      <created>1678717368643</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1678717368643</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,31 +175,12 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="oui" />
     <MESSAGE value="initCommit" />
     <MESSAGE value="IHM 2 parties gauche droite" />
     <MESSAGE value="a" />
     <MESSAGE value="AUTO BOAT PLACEMENT" />
     <MESSAGE value="player Axel" />
-    <MESSAGE value="oui" />
-    <option name="LAST_COMMIT_MESSAGE" value="oui" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/BatailleNavale/Player.cs</url>
-          <line>76</line>
-          <properties documentPath="D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\Player.cs" initialLine="76" containingFunctionPresentation="method 'AttackRIENCOULE'">
-            <startOffsets>
-              <option value="1874" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1911" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="player Axel" />
   </component>
 </project>
