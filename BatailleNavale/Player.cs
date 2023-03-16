@@ -75,7 +75,7 @@ public class Player
         if (enemy.map.touchable(x, y))
         {
             toucheCoule = enemy.map.attack(x, y);
-            Console.WriteLine("La case" + x + y + "est : " + enemy.map._boatMap[x,y].isTouched);
+            Console.WriteLine("La case " + x + "" + y + " est : " + enemy.map._boatMap[x,y].isTouched + " " + toucheCoule);
         }
         else
         {

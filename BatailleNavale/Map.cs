@@ -103,34 +103,34 @@ public class Map
         }
     }
 
-    public void PlaceBoats(bool isPlayer)
+    public void PlaceBoats(Player p, bool isPlayer)
     {
         if (isPlayer)
             PlaceBoatsByPlayer();
         else
-            PlaceBoatsAuto();
-        
+            PlaceBoatsAuto(p);
+
+
     }
 
-    private void PlaceBoatsAuto()
+    private void PlaceBoatsAuto(Player p)
     {
-        PlaceBoatsBySize(_boat1, 1);
-        PlaceBoatsBySize(_boat2, 2);
-        PlaceBoatsBySize(_boat3, 3);
-        PlaceBoatsBySize(_boat4, 4);
+        PlaceBoatsBySize(p, _boat1, 1);
+        PlaceBoatsBySize(p, _boat2, 2);
+        PlaceBoatsBySize(p, _boat3, 3);
+        PlaceBoatsBySize(p, _boat4, 4);
     }
 
-    private void PlaceBoatsBySize(int nbBoat, int boatSize)
+    private void PlaceBoatsBySize(Player p, int nbBoat, int boatSize)
     {
         for (int i = 0; i < nbBoat; i++)
         {
-            PlaceBoatBySize(boatSize);
+            PlaceBoatBySize(p, boatSize);
         }
     }
 
-    private void PlaceBoatBySize(int boatSize)
+    private void PlaceBoatBySize(Player p, int boatSize)
     {
-        Player p = Game.GetInstance().getBot();
         Map m = p.map;
 
         // random x y 
@@ -300,7 +300,7 @@ public class Map
                 cell.Boat = b;
             }
         }
-        else PlaceBoatBySize(boatSize);
+        else PlaceBoatBySize(p, boatSize);
     }
 
 
@@ -337,8 +337,7 @@ public class Map
 
         if (_boatMap[x, y].Boat.IsAlive())
             return e.TOUCHE;
-        else
-            return e.COULE;
+        return e.COULE;
 
         
     }

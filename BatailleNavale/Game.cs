@@ -25,8 +25,8 @@ public class Game
         _botMap = Bot.map;
         _userMap = User.map;
         
-        _botMap.PlaceBoats(false);
-        _userMap.PlaceBoats(false);
+        _botMap.PlaceBoats(Bot, false);
+        _userMap.PlaceBoats(User, false);
 
 
         Start();

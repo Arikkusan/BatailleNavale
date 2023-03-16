@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {}
+    "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {}
   },
   "projects": {
-    "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {
+    "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
+        "projectUniqueName": "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
         "projectName": "BatailleNavale",
-        "projectPath": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
-        "packagesPath": "C:\\Users\\flyde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\obj\\",
+        "projectPath": "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
+        "packagesPath": "C:\\Users\\Alix Jaugey\\.nuget\\packages\\",
+        "outputPath": "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\flyde\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Alix Jaugey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\flyde\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
