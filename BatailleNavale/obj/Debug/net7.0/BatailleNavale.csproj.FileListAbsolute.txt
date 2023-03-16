@@ -28,3 +28,18 @@ D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\refint\Ba
 D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.pdb
 D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.genruntimeconfig.cache
 D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\obj\Debug\net7.0\ref\BatailleNavale.dll
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.exe
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.deps.json
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.runtimeconfig.json
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.dll
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\bin\Debug\net7.0\BatailleNavale.pdb
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.csproj.AssemblyReference.cache
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.AssemblyInfoInputs.cache
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.AssemblyInfo.cs
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.csproj.CoreCompileInputs.cache
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.dll
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\refint\BatailleNavale.dll
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.pdb
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\BatailleNavale.genruntimeconfig.cache
+C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\obj\Debug\net7.0\ref\BatailleNavale.dll

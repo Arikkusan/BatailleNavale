@@ -34,8 +34,11 @@ public class Game
 
     private void Start()
     {
-        DrawGameMap();
-        Bot.AttackAuto(User);
+        for (int i = 0; i < 10; i++)
+        {
+            DrawGameMap();
+            Bot.AttackAuto(User);
+        }
         DrawGameMap();
     }
 

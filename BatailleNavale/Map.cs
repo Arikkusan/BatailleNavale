@@ -2,7 +2,7 @@
 
 public class Map
 {
-    private Case[,] _boatMap;
+    public Case[,] _boatMap { get; }
 
     private readonly int _boat4 = 2;
     private readonly int _boat3 = 3;
@@ -330,13 +330,17 @@ public class Map
             _boatMap[x, y].Boat.Touch();
         }
         else
+        {
+            _boatMap[x, y].isTouched = true;
             return e.RIEN;
+        }
 
         if (_boatMap[x, y].Boat.IsAlive())
             return e.TOUCHE;
+        else
+            return e.COULE;
 
         
-        return e.COULE;
     }
 
     public bool boatAlive(int x, int y)

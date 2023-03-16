@@ -8,6 +8,7 @@ public class Player
     private e toucheCoule = e.RIEN;
     private direction direct = direction.Rien;
     private List<direction> listDirect = new List<direction>();
+    private List<Coordinates> foundBoat = new List<Coordinates>();
     private int x, y;
     private int z = 0;
 
@@ -36,7 +37,14 @@ public class Player
         switch (toucheCoule)
         {
             case e.RIEN:
+                AttackRIENCOULE(enemy);
+                break;
+            
             case e.COULE:
+                x = foundBoat[0].X;
+                y = foundBoat[0].Y;
+                foundBoat.RemoveAt(0);
+                foundBoat.Sort();
                 AttackRIENCOULE(enemy);
                 break;
 
@@ -54,6 +62,7 @@ public class Player
     {
         listDirect.Add(direct);
         direct = chooseDirect();
+        z = 0;
         AttackTOUCHE(enemy);
     }
 
@@ -66,6 +75,7 @@ public class Player
         if (enemy.map.touchable(x, y))
         {
             toucheCoule = enemy.map.attack(x, y);
+            Console.WriteLine("La case" + x + y + "est " + enemy.map._boatMap[x,y].isTouched);
         }
         else
         {
@@ -99,6 +109,11 @@ public class Player
                             {
                                 toucheCoule = e.RATE;
                             }
+                            else if (enemy.map._boatMap[x2, y].Boat != enemy.map._boatMap[x, y].Boat)
+                            {
+                                toucheCoule = e.RATE;
+                                foundBoat.Add(new Coordinates(x2,y));
+                            }
                             else
                             {
                                 z += 1;
@@ -120,6 +135,11 @@ public class Player
                             if (toucheCoule == e.RIEN)
                             {
                                 toucheCoule = e.RATE;
+                            }
+                            else if (enemy.map._boatMap[x2, y].Boat != enemy.map._boatMap[x, y].Boat)
+                            {
+                                toucheCoule = e.RATE;
+                                foundBoat.Add(new Coordinates(x2,y));
                             }
                             else
                             {
@@ -143,6 +163,11 @@ public class Player
                             {
                                 toucheCoule = e.RATE;
                             }
+                            else if (enemy.map._boatMap[x, y2].Boat != enemy.map._boatMap[x, y].Boat)
+                            {
+                                toucheCoule = e.RATE;
+                                foundBoat.Add(new Coordinates(x,y2));
+                            }
                             else
                             {
                                 z += 1;
@@ -165,15 +190,22 @@ public class Player
                             {
                                 toucheCoule = e.RATE;
                             }
+                            else if (enemy.map._boatMap[x, y2].Boat != enemy.map._boatMap[x, y].Boat)
+                            {
+                                toucheCoule = e.RATE;
+                                foundBoat.Add(new Coordinates(x,y2));
+                            }
                             else
                             {
                                 z += 1;
                             }
+                            
                         }
                     }
 
                     break;
             }
+            Console.WriteLine("TEST");
         }
     }
 
