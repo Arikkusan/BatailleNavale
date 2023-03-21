@@ -22,18 +22,6 @@ public class Player
 
     public void AttackAuto(Player enemy)
     {
-        /*if (x != null)
-        {
-            if (enemy.map.verifIsAlive(x, y))
-            {
-                toucheCoule = e.TOUCHE;
-            }
-            else
-            {
-                direct = direction.Rien;
-            }
-        } */ // Pas sûr d'en avoir besoin    
-
         switch (toucheCoule)
         {
             case e.RIEN:

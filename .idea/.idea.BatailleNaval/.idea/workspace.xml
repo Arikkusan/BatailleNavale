@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7ac7f73-9fe6-45ef-8a27-75ba1bc69172" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Update_at_16_03_2023_21_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Update_at_16_03_2023_21_56__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Update_at_21_03_2023_09_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Update_at_21_03_2023_09_17__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Update_at_21_03_2023_09_27__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Update_at_21_03_2023_09_27__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/ref/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/ref/BatailleNavale.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/refint/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/refint/BatailleNavale.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BatailleNavale/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +98,7 @@
       <workItem from="1679437316070" duration="225000" />
       <workItem from="1679437557274" duration="18000" />
       <workItem from="1679437588965" duration="267000" />
-      <workItem from="1679437877622" duration="63000" />
+      <workItem from="1679437877622" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="oui">
       <created>1677072625523</created>
@@ -173,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678712745115</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Changé vite fait game.cs">
+      <created>1679437966582</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679437966582</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +173,7 @@
     <MESSAGE value="a" />
     <MESSAGE value="AUTO BOAT PLACEMENT" />
     <MESSAGE value="player Axel" />
-    <option name="LAST_COMMIT_MESSAGE" value="player Axel" />
+    <MESSAGE value="Changé vite fait game.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changé vite fait game.cs" />
   </component>
 </project>
