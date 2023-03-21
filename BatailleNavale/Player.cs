@@ -314,4 +314,9 @@ public class Player
         Gauche,
         Rien
     }
+
+    public void AttackPlayer(Coordinates coo)
+    {
+        throw new NotImplementedException();
+    }
 }

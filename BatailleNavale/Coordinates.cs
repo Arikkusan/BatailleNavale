@@ -47,6 +47,37 @@ public class Coordinates
         }
     }
 
+    public static bool IsCoordinate(string text)
+    {
+        bool toReturn;
+        string[] letters = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
+        string[] intsPossible = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+        if (text.Length != 2)
+        {
+            toReturn = false;
+        }
+        else
+        {
+            if (letters.Contains(text[0].ToString().ToUpper()))
+            {
+                if (intsPossible.Contains(text[1].ToString()))
+                {
+                    toReturn = true;
+                }
+                else
+                {
+                    toReturn = false;
+                }
+            }
+            else
+            {
+                toReturn = false;
+            }
+        }
+
+        return toReturn;
+    }
+
     public static Coordinates ConvertTextInput(String txt)
     {
         if (txt.Length == 2)
