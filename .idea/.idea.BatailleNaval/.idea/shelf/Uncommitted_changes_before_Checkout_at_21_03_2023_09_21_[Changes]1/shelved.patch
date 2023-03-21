@@ -1,0 +1,294 @@
+Index: BatailleNavale/Player.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>namespace BatailleNavale;\r\n\r\npublic class Player\r\n{\r\n    public int nbBoat { get; set; } // compteur de cases utilisées restantes\r\n    public List<Boat> boats; // liste de bateau sur la Map (en vie ou non)\r\n    public Map map;\r\n    private e toucheCoule = e.RIEN;\r\n    private direction direct = direction.Rien;\r\n    private List<direction> listDirect = new List<direction>();\r\n    private List<Coordinates> foundBoat = new List<Coordinates>();\r\n    private int x, y;\r\n    private int z = 0;\r\n\r\n\r\n    public Player()\r\n    {\r\n        this.nbBoat = 10;\r\n        this.boats = new List<Boat>();\r\n        this.map = new Map();\r\n    }\r\n\r\n    public void AttackAuto(Player enemy)\r\n    {\r\n        /*if (x != null)\r\n        {\r\n            if (enemy.map.verifIsAlive(x, y))\r\n            {\r\n                toucheCoule = e.TOUCHE;\r\n            }\r\n            else\r\n            {\r\n                direct = direction.Rien;\r\n            }\r\n        } */ // Pas sûr d'en avoir besoin    \r\n\r\n        switch (toucheCoule)\r\n        {\r\n            case e.RIEN:\r\n                AttackRIENCOULE(enemy);\r\n                break;\r\n            \r\n            case e.COULE:\r\n                x = foundBoat[0].X;\r\n                y = foundBoat[0].Y;\r\n                foundBoat.RemoveAt(0);\r\n                foundBoat.Sort();\r\n                AttackRIENCOULE(enemy);\r\n                break;\r\n\r\n            case e.RATE:\r\n                AttackRATE(enemy);\r\n                break;\r\n\r\n            case e.TOUCHE:\r\n                AttackTOUCHE(enemy);\r\n                break;\r\n        }\r\n    }\r\n\r\n    private void AttackRATE(Player enemy)\r\n    {\r\n        listDirect.Add(direct);\r\n        direct = chooseDirect();\r\n        z = 0;\r\n        AttackTOUCHE(enemy);\r\n    }\r\n\r\n    private void AttackRIENCOULE(Player enemy)\r\n    {\r\n        reset();\r\n        x = new Random().Next(0, 10);\r\n        y = new Random().Next(0, 10);\r\n\r\n        if (enemy.map.touchable(x, y))\r\n        {\r\n            toucheCoule = enemy.map.attack(x, y);\r\n        }\r\n        else\r\n        {\r\n            AttackRIENCOULE(enemy);\r\n        }\r\n    }\r\n\r\n    private void AttackTOUCHE(Player enemy)\r\n    {\r\n        int x2 = x;\r\n        int y2 = y;\r\n        bool hasTouched = false;\r\n        while (!hasTouched)\r\n        {\r\n            switch (direct)\r\n            {\r\n                case direction.Rien:\r\n                    direct = chooseDirect();\r\n                    break;\r\n\r\n                case direction.Haut:\r\n                    x2 = x + 1 + z;\r\n                    if (x2 < 10)\r\n                    {\r\n                        if (enemy.map.touchable(x2, y))\r\n                        {\r\n                            toucheCoule = enemy.map.attack(x2, y);\r\n                            hasTouched = true;\r\n\r\n                            if (toucheCoule == e.RIEN)\r\n                            {\r\n                                toucheCoule = e.RATE;\r\n                            }\r\n                            else if (enemy.map._boatMap[x2, y].Boat != enemy.map._boatMap[x, y].Boat)\r\n                            {\r\n                                toucheCoule = e.RATE;\r\n                                foundBoat.Add(new Coordinates(x2,y));\r\n                            }\r\n                            else\r\n                            {\r\n                                z += 1;\r\n                            }\r\n                        }\r\n                    }\r\n\r\n                    break;\r\n\r\n                case direction.Bas:\r\n                    x2 = x - 1 - z;\r\n                    if (x2 >= 0)\r\n                    {\r\n                        if (enemy.map.touchable(x2, y))\r\n                        {\r\n                            toucheCoule = enemy.map.attack(x2, y);\r\n                            hasTouched = true;\r\n\r\n                            if (toucheCoule == e.RIEN)\r\n                            {\r\n                                toucheCoule = e.RATE;\r\n                            }\r\n                            else if (enemy.map._boatMap[x2, y].Boat != enemy.map._boatMap[x, y].Boat)\r\n                            {\r\n                                toucheCoule = e.RATE;\r\n                                foundBoat.Add(new Coordinates(x2,y));\r\n                            }\r\n                            else\r\n                            {\r\n                                z += 1;\r\n                            }\r\n                        }\r\n                    }\r\n\r\n                    break;\r\n\r\n                case direction.Droite:\r\n                    y2 = y + 1 + z;\r\n                    if (y2 < 10)\r\n                    {\r\n                        if (enemy.map.touchable(x, y2))\r\n                        {\r\n                            toucheCoule = enemy.map.attack(x, y2);\r\n                            hasTouched = true;\r\n\r\n                            if (toucheCoule == e.RIEN)\r\n                            {\r\n                                toucheCoule = e.RATE;\r\n                            }\r\n                            else if (enemy.map._boatMap[x, y2].Boat != enemy.map._boatMap[x, y].Boat)\r\n                            {\r\n                                toucheCoule = e.RATE;\r\n                                foundBoat.Add(new Coordinates(x,y2));\r\n                            }\r\n                            else\r\n                            {\r\n                                z += 1;\r\n                            }\r\n                        }\r\n                    }\r\n\r\n                    break;\r\n\r\n                case direction.Gauche:\r\n                    y2 = y - 1 - z;\r\n                    if (y2 > 0)\r\n                    {\r\n                        if (enemy.map.touchable(x, y2))\r\n                        {\r\n                            toucheCoule = enemy.map.attack(x, y2);\r\n                            hasTouched = true;\r\n\r\n                            if (toucheCoule == e.RIEN)\r\n                            {\r\n                                toucheCoule = e.RATE;\r\n                            }\r\n                            else if (enemy.map._boatMap[x, y2].Boat != enemy.map._boatMap[x, y].Boat)\r\n                            {\r\n                                toucheCoule = e.RATE;\r\n                                foundBoat.Add(new Coordinates(x,y2));\r\n                            }\r\n                            else\r\n                            {\r\n                                z += 1;\r\n                            }\r\n                            \r\n                        }\r\n                    }\r\n\r\n                    break;\r\n            }\r\n            Console.WriteLine(\"TEST\");\r\n        }\r\n    }\r\n\r\n    private direction chooseDirect()\r\n    {\r\n        int x = new Random().Next(1, 5);\r\n        direction d = direction.Rien;\r\n\r\n        switch (x)\r\n        {\r\n            case 1:\r\n                if (!verifListDirect(direction.Haut))\r\n                {\r\n                    d = direction.Haut;\r\n                }\r\n\r\n                break;\r\n            case 2:\r\n                if (!verifListDirect(direction.Bas))\r\n                {\r\n                    d = direction.Bas;\r\n                }\r\n\r\n                break;\r\n            case 3:\r\n                if (!verifListDirect(direction.Droite))\r\n                {\r\n                    d = direction.Droite;\r\n                }\r\n\r\n                break;\r\n            case 4:\r\n                if (!verifListDirect(direction.Gauche))\r\n                {\r\n                    d = direction.Gauche;\r\n                }\r\n\r\n                break;\r\n        }\r\n\r\n        return d;\r\n    }\r\n\r\n    private bool verifListDirect(direction d)\r\n    {\r\n        for (int i = 0; i < listDirect.Count; i++)\r\n        {\r\n            if (listDirect[i] == d)\r\n            {\r\n                return true;\r\n            }\r\n        }\r\n\r\n        return false;\r\n    }\r\n\r\n    private void reset()\r\n    {\r\n        x = 0;\r\n        y = 0;\r\n        z = 0;\r\n        listDirect.Clear();\r\n        direct = direction.Rien;\r\n    }\r\n\r\n    public enum direction\r\n    {\r\n        Haut,\r\n        Bas,\r\n        Droite,\r\n        Gauche,\r\n        Rien\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BatailleNavale/Player.cs b/BatailleNavale/Player.cs
+--- a/BatailleNavale/Player.cs	
++++ b/BatailleNavale/Player.cs	
+@@ -241,7 +241,6 @@
+                 {
+                     d = direction.Gauche;
+                 }
+-
+                 break;
+         }
+ 
+Index: BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\r\n<Project ToolsVersion=\"14.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\r\n  <PropertyGroup Condition=\" '$(ExcludeRestorePackageImports)' != 'true' \">\r\n    <RestoreSuccess Condition=\" '$(RestoreSuccess)' == '' \">True</RestoreSuccess>\r\n    <RestoreTool Condition=\" '$(RestoreTool)' == '' \">NuGet</RestoreTool>\r\n    <ProjectAssetsFile Condition=\" '$(ProjectAssetsFile)' == '' \">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>\r\n    <NuGetPackageRoot Condition=\" '$(NuGetPackageRoot)' == '' \">$(UserProfile)\\.nuget\\packages\\</NuGetPackageRoot>\r\n    <NuGetPackageFolders Condition=\" '$(NuGetPackageFolders)' == '' \">C:\\Users\\flyde\\.nuget\\packages\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages</NuGetPackageFolders>\r\n    <NuGetProjectStyle Condition=\" '$(NuGetProjectStyle)' == '' \">PackageReference</NuGetProjectStyle>\r\n    <NuGetToolVersion Condition=\" '$(NuGetToolVersion)' == '' \">6.4.0</NuGetToolVersion>\r\n  </PropertyGroup>\r\n  <ItemGroup Condition=\" '$(ExcludeRestorePackageImports)' != 'true' \">\r\n    <SourceRoot Include=\"C:\\Users\\flyde\\.nuget\\packages\\\" />\r\n    <SourceRoot Include=\"C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\\" />\r\n  </ItemGroup>\r\n</Project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props b/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props
+--- a/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props	
++++ b/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props	
+@@ -5,12 +5,11 @@
+     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\flyde\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
++    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Alix Jaugey\.nuget\packages\</NuGetPackageFolders>
+     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.4.0</NuGetToolVersion>
+   </PropertyGroup>
+   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+-    <SourceRoot Include="C:\Users\flyde\.nuget\packages\" />
+-    <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
++    <SourceRoot Include="C:\Users\Alix Jaugey\.nuget\packages\" />
+   </ItemGroup>
+ </Project>
+\ No newline at end of file
+Index: BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>is_global = true\r\nbuild_property.TargetFramework = net7.0\r\nbuild_property.TargetPlatformMinVersion = \r\nbuild_property.UsingMicrosoftNETSdkWeb = \r\nbuild_property.ProjectTypeGuids = \r\nbuild_property.InvariantGlobalization = \r\nbuild_property.PlatformNeutralAssembly = \r\nbuild_property.EnforceExtendedAnalyzerRules = \r\nbuild_property._SupportedPlatformList = Linux,macOS,Windows\r\nbuild_property.RootNamespace = BatailleNavale\r\nbuild_property.ProjectDir = C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig b/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig
+--- a/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig	
++++ b/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig	
+@@ -8,4 +8,4 @@
+ build_property.EnforceExtendedAnalyzerRules = 
+ build_property._SupportedPlatformList = Linux,macOS,Windows
+ build_property.RootNamespace = BatailleNavale
+-build_property.ProjectDir = C:\Users\flyde\Desktop\IUT\Projet\Exos\Exo1___\BatailleNavale\BatailleNavale\
++build_property.ProjectDir = D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\
+Index: BatailleNavale/obj/project.packagespec.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"restore\":{\"projectUniqueName\":\"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\BatailleNavale.csproj\",\"projectName\":\"BatailleNavale\",\"projectPath\":\"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\BatailleNavale.csproj\",\"outputPath\":\"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\obj\\\\\",\"projectStyle\":\"PackageReference\",\"fallbackFolders\":[\"C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\Shared\\\\NuGetPackages\"],\"originalTargetFrameworks\":[\"net7.0\"],\"sources\":{\"C:\\\\Program Files (x86)\\\\Microsoft SDKs\\\\NuGetPackages\\\\\":{},\"https://api.nuget.org/v3/index.json\":{}},\"frameworks\":{\"net7.0\":{\"targetAlias\":\"net7.0\",\"projectReferences\":{}}},\"warningProperties\":{\"warnAsError\":[\"NU1605\"]}}\"frameworks\":{\"net7.0\":{\"targetAlias\":\"net7.0\",\"imports\":[\"net461\",\"net462\",\"net47\",\"net471\",\"net472\",\"net48\",\"net481\"],\"assetTargetFallback\":true,\"warn\":true,\"frameworkReferences\":{\"Microsoft.NETCore.App\":{\"privateAssets\":\"all\"}},\"runtimeIdentifierGraphPath\":\"C:\\\\Users\\\\flyde\\\\.dotnet\\\\sdk\\\\7.0.101\\\\RuntimeIdentifierGraph.json\"}}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BatailleNavale/obj/project.packagespec.json b/BatailleNavale/obj/project.packagespec.json
+--- a/BatailleNavale/obj/project.packagespec.json	
++++ b/BatailleNavale/obj/project.packagespec.json	
+@@ -1,1 +1,1 @@
+-"restore":{"projectUniqueName":"C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj","projectName":"BatailleNavale","projectPath":"C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj","outputPath":"C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\obj\\","projectStyle":"PackageReference","fallbackFolders":["C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"],"originalTargetFrameworks":["net7.0"],"sources":{"C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\":{},"https://api.nuget.org/v3/index.json":{}},"frameworks":{"net7.0":{"targetAlias":"net7.0","projectReferences":{}}},"warningProperties":{"warnAsError":["NU1605"]}}"frameworks":{"net7.0":{"targetAlias":"net7.0","imports":["net461","net462","net47","net471","net472","net48","net481"],"assetTargetFallback":true,"warn":true,"frameworkReferences":{"Microsoft.NETCore.App":{"privateAssets":"all"}},"runtimeIdentifierGraphPath":"C:\\Users\\flyde\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"}}
+\ No newline at end of file
++"restore":{"projectUniqueName":"D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj","projectName":"BatailleNavale","projectPath":"D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj","outputPath":"D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\obj\\","projectStyle":"PackageReference","originalTargetFrameworks":["net7.0"],"sources":{"C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\":{},"https://api.nuget.org/v3/index.json":{}},"frameworks":{"net7.0":{"targetAlias":"net7.0","projectReferences":{}}},"warningProperties":{"warnAsError":["NU1605"]}}"frameworks":{"net7.0":{"targetAlias":"net7.0","imports":["net461","net462","net47","net471","net472","net48","net481"],"assetTargetFallback":true,"warn":true,"frameworkReferences":{"Microsoft.NETCore.App":{"privateAssets":"all"}},"runtimeIdentifierGraphPath":"C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"}}
+\ No newline at end of file
+Index: BatailleNavale/obj/rider.project.restore.info
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>16790011982426351
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BatailleNavale/obj/rider.project.restore.info b/BatailleNavale/obj/rider.project.restore.info
+--- a/BatailleNavale/obj/rider.project.restore.info	
++++ b/BatailleNavale/obj/rider.project.restore.info	
+@@ -1,1 +1,1 @@
+-16790011982426351
+\ No newline at end of file
++16793866475125274
+\ No newline at end of file
+Index: .idea/.idea.BatailleNaval/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoGeneratedRunConfigurationManager\">\r\n    <projectFile>BatailleNaval/BatailleNaval.csproj</projectFile>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a7ac7f73-9fe6-45ef-8a27-75ba1bc69172\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/Game.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/Game.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/Map.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/Map.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/Player.cs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/Player.cs\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.exe\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.exe\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.dll\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.dll\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/project.assets.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/project.assets.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"IKU\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MetaFilesCheckinStateConfiguration\" checkMetaFiles=\"true\" />\r\n  <component name=\"ProjectId\" id=\"2M5V0GkmF0i5gjGrRXuQbO1sGH7\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;rider.external.source.directories&quot;: [\r\n      &quot;C:\\\\Users\\\\flyde\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2022.3\\\\resharper-host\\\\DecompilerCache&quot;,\r\n      &quot;C:\\\\Users\\\\flyde\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2022.3\\\\resharper-host\\\\SourcesCache&quot;,\r\n      &quot;C:\\\\Users\\\\flyde\\\\AppData\\\\Local\\\\Symbols\\\\src&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"BatailleNaval\" type=\"DotNetProject\" factoryName=\".NET Project\">\r\n      <option name=\"EXE_PATH\" value=\"\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <option name=\"USE_MONO\" value=\"0\" />\r\n      <option name=\"RUNTIME_ARGUMENTS\" value=\"\" />\r\n      <option name=\"PROJECT_PATH\" value=\"$PROJECT_DIR$/BatailleNavale/BatailleNavale.csproj\" />\r\n      <option name=\"PROJECT_EXE_PATH_TRACKING\" value=\"1\" />\r\n      <option name=\"PROJECT_ARGUMENTS_TRACKING\" value=\"1\" />\r\n      <option name=\"PROJECT_WORKING_DIRECTORY_TRACKING\" value=\"1\" />\r\n      <option name=\"PROJECT_KIND\" value=\"DotNetCore\" />\r\n      <option name=\"PROJECT_TFM\" value=\"\" />\r\n      <method v=\"2\">\r\n        <option name=\"Build\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a7ac7f73-9fe6-45ef-8a27-75ba1bc69172\" name=\"Changes\" comment=\"\" />\r\n      <created>1677057212226</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1677057212226</updated>\r\n      <workItem from=\"1677057212226\" duration=\"3805000\" />\r\n      <workItem from=\"1677069275127\" duration=\"5882000\" />\r\n      <workItem from=\"1677076161218\" duration=\"4043000\" />\r\n      <workItem from=\"1677284455144\" duration=\"280000\" />\r\n      <workItem from=\"1677440580080\" duration=\"104000\" />\r\n      <workItem from=\"1677482376300\" duration=\"261000\" />\r\n      <workItem from=\"1677483327852\" duration=\"920000\" />\r\n      <workItem from=\"1677488524153\" duration=\"4162000\" />\r\n      <workItem from=\"1677500994335\" duration=\"5935000\" />\r\n      <workItem from=\"1677569325634\" duration=\"2839000\" />\r\n      <workItem from=\"1677590924922\" duration=\"2045000\" />\r\n      <workItem from=\"1677671427004\" duration=\"2399000\" />\r\n      <workItem from=\"1678288573130\" duration=\"3858000\" />\r\n      <workItem from=\"1678712481920\" duration=\"2393000\" />\r\n      <workItem from=\"1678998215824\" duration=\"1834000\" />\r\n      <workItem from=\"1679006962708\" duration=\"777000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"oui\">\r\n      <created>1677072625523</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677072625523</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"initCommit\">\r\n      <created>1677072816990</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677072816990</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"IHM 2 parties gauche droite\">\r\n      <created>1677076928473</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677076928473</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"a\">\r\n      <created>1677440634931</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677440634931</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"a\">\r\n      <created>1677440676232</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677440676232</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"AUTO BOAT PLACEMENT\">\r\n      <created>1677592948485</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1677592948485</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"player Axel\">\r\n      <created>1678712745115</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1678712745115</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"true\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"NUnit\" />\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <option name=\"CLEAR_INITIAL_COMMIT_MESSAGE\" value=\"true\" />\r\n    <MESSAGE value=\"oui\" />\r\n    <MESSAGE value=\"initCommit\" />\r\n    <MESSAGE value=\"IHM 2 parties gauche droite\" />\r\n    <MESSAGE value=\"a\" />\r\n    <MESSAGE value=\"AUTO BOAT PLACEMENT\" />\r\n    <MESSAGE value=\"player Axel\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"player Axel\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.BatailleNaval/.idea/workspace.xml b/.idea/.idea.BatailleNaval/.idea/workspace.xml
+--- a/.idea/.idea.BatailleNaval/.idea/workspace.xml	
++++ b/.idea/.idea.BatailleNaval/.idea/workspace.xml	
+@@ -6,26 +6,6 @@
+   <component name="ChangeListManager">
+     <list default="true" id="a7ac7f73-9fe6-45ef-8a27-75ba1bc69172" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Game.cs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Map.cs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/Player.cs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.exe" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/BatailleNavale.csproj.nuget.g.props" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.dll" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/BatailleNavale.pdb" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/Debug/net7.0/apphost.exe" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.assets.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.nuget.cache" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/project.packagespec.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BatailleNavale/obj/rider.project.restore.info" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -38,6 +18,20 @@
+         <entry key="$PROJECT_DIR$" value="IKU" />
+       </map>
+     </option>
++  </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/59c0c99d9dbd54ebe2f8cc4a807edc377e1090f4f7d96e9a246de9cba61748e0/TextWriter.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6879c9ed20391a5ccfea363be5964fbcfe4f1dfde9558aa84b36df6b6ec92c6/List.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6bfb5caa34a165fe407ffb9d2b7285ffa682b2e3eb1f4f18fb6a945a576c4/Random.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6ded3f6ae7aed8c9d21c26124d94ad0cc21728e56793485dc472863d26eeaeb/StreamWriter.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d43fa890c7fc70c8ba3d3d33ee567045a39b9710f73b3ced707d8ab62d83/Console.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db4df86ddb39afb7d95742baab6b2cd3f49e78e518bf7a84e7a66bc45585ff/Interop.BCryptGenRandom.GetRandomBytes.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb643aeff3db18a0c8fc3f6dec4c87a694229c8c871b5f71d8a852177e473d7f/Random.Xoshiro256StarStarImpl.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$USER_HOME$/Downloads/Map.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$USER_HOME$/Downloads/Player (1).cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$USER_HOME$/Downloads/Player.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$USER_HOME$/Downloads/e.cs" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/../TP03_POO/TP03_POO/Product.cs" root0="SKIP_HIGHLIGHTING" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -59,14 +53,14 @@
+     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+   &quot;keyToStringList&quot;: {
+     &quot;rider.external.source.directories&quot;: [
+-      &quot;C:\\Users\\flyde\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+-      &quot;C:\\Users\\flyde\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+-      &quot;C:\\Users\\flyde\\AppData\\Local\\Symbols\\src&quot;
++      &quot;C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
++      &quot;C:\\Users\\Alix Jaugey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
++      &quot;C:\\Users\\Alix Jaugey\\AppData\\Local\\Symbols\\src&quot;
+     ]
+   }
+ }</component>
+@@ -111,9 +105,9 @@
+       <workItem from="1677590924922" duration="2045000" />
+       <workItem from="1677671427004" duration="2399000" />
+       <workItem from="1678288573130" duration="3858000" />
+-      <workItem from="1678712481920" duration="2393000" />
+-      <workItem from="1678998215824" duration="1834000" />
+-      <workItem from="1679006962708" duration="777000" />
++      <workItem from="1678712481920" duration="2406000" />
++      <workItem from="1679000129242" duration="1002000" />
++      <workItem from="1679320273911" duration="749000" />
+     </task>
+     <task id="LOCAL-00001" summary="oui">
+       <created>1677072625523</created>
+@@ -164,7 +158,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1678712745115</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="oui">
++      <created>1678717368643</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1678717368643</updated>
++    </task>
++    <task id="LOCAL-00009" summary="placeBoatAuto pour tous">
++      <created>1679001139606</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1679001139606</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -175,12 +183,36 @@
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+-    <MESSAGE value="oui" />
+     <MESSAGE value="initCommit" />
+     <MESSAGE value="IHM 2 parties gauche droite" />
+     <MESSAGE value="a" />
+     <MESSAGE value="AUTO BOAT PLACEMENT" />
+     <MESSAGE value="player Axel" />
+-    <option name="LAST_COMMIT_MESSAGE" value="player Axel" />
++    <MESSAGE value="oui" />
++    <MESSAGE value="placeBoatAuto pour tous" />
++    <option name="LAST_COMMIT_MESSAGE" value="placeBoatAuto pour tous" />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="DotNet Breakpoints">
++          <url>file://$PROJECT_DIR$/BatailleNavale/Player.cs</url>
++          <line>76</line>
++          <properties documentPath="D:\Projets\Projets - CS\BatailleNavale\BatailleNavale\Player.cs" initialLine="76" containingFunctionPresentation="method 'AttackRIENCOULE'">
++            <startOffsets>
++              <option value="1874" />
++            </startOffsets>
++            <endOffsets>
++              <option value="1911" />
++            </endOffsets>
++          </properties>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
++  </component>
++  <component name="XSLT-Support.FileAssociations.UIState">
++    <expand />
++    <select />
+   </component>
+ </project>
+\ No newline at end of file
+Index: BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"format\": 1,\r\n  \"restore\": {\r\n    \"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\BatailleNavale.csproj\": {}\r\n  },\r\n  \"projects\": {\r\n    \"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\BatailleNavale.csproj\": {\r\n      \"version\": \"1.0.0\",\r\n      \"restore\": {\r\n        \"projectUniqueName\": \"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\BatailleNavale.csproj\",\r\n        \"projectName\": \"BatailleNavale\",\r\n        \"projectPath\": \"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\BatailleNavale.csproj\",\r\n        \"packagesPath\": \"C:\\\\Users\\\\flyde\\\\.nuget\\\\packages\\\\\",\r\n        \"outputPath\": \"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\obj\\\\\",\r\n        \"projectStyle\": \"PackageReference\",\r\n        \"fallbackFolders\": [\r\n          \"C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\Shared\\\\NuGetPackages\"\r\n        ],\r\n        \"configFilePaths\": [\r\n          \"C:\\\\Users\\\\flyde\\\\AppData\\\\Roaming\\\\NuGet\\\\NuGet.Config\",\r\n          \"C:\\\\Program Files (x86)\\\\NuGet\\\\Config\\\\Microsoft.VisualStudio.FallbackLocation.config\",\r\n          \"C:\\\\Program Files (x86)\\\\NuGet\\\\Config\\\\Microsoft.VisualStudio.Offline.config\"\r\n        ],\r\n        \"originalTargetFrameworks\": [\r\n          \"net7.0\"\r\n        ],\r\n        \"sources\": {\r\n          \"C:\\\\Program Files (x86)\\\\Microsoft SDKs\\\\NuGetPackages\\\\\": {},\r\n          \"https://api.nuget.org/v3/index.json\": {}\r\n        },\r\n        \"frameworks\": {\r\n          \"net7.0\": {\r\n            \"targetAlias\": \"net7.0\",\r\n            \"projectReferences\": {}\r\n          }\r\n        },\r\n        \"warningProperties\": {\r\n          \"warnAsError\": [\r\n            \"NU1605\"\r\n          ]\r\n        }\r\n      },\r\n      \"frameworks\": {\r\n        \"net7.0\": {\r\n          \"targetAlias\": \"net7.0\",\r\n          \"imports\": [\r\n            \"net461\",\r\n            \"net462\",\r\n            \"net47\",\r\n            \"net471\",\r\n            \"net472\",\r\n            \"net48\",\r\n            \"net481\"\r\n          ],\r\n          \"assetTargetFallback\": true,\r\n          \"warn\": true,\r\n          \"frameworkReferences\": {\r\n            \"Microsoft.NETCore.App\": {\r\n              \"privateAssets\": \"all\"\r\n            }\r\n          },\r\n          \"runtimeIdentifierGraphPath\": \"C:\\\\Users\\\\flyde\\\\.dotnet\\\\sdk\\\\7.0.101\\\\RuntimeIdentifierGraph.json\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json b/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json
+--- a/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json	
++++ b/BatailleNavale/obj/BatailleNavale.csproj.nuget.dgspec.json	
+@@ -1,24 +1,20 @@
+ {
+   "format": 1,
+   "restore": {
+-    "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {}
++    "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {}
+   },
+   "projects": {
+-    "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {
++    "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {
+       "version": "1.0.0",
+       "restore": {
+-        "projectUniqueName": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
++        "projectUniqueName": "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
+         "projectName": "BatailleNavale",
+-        "projectPath": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
+-        "packagesPath": "C:\\Users\\flyde\\.nuget\\packages\\",
+-        "outputPath": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\obj\\",
++        "projectPath": "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
++        "packagesPath": "C:\\Users\\Alix Jaugey\\.nuget\\packages\\",
++        "outputPath": "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\obj\\",
+         "projectStyle": "PackageReference",
+-        "fallbackFolders": [
+-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+-        ],
+         "configFilePaths": [
+-          "C:\\Users\\flyde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
++          "C:\\Users\\Alix Jaugey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+         ],
+         "originalTargetFrameworks": [
+@@ -59,7 +55,7 @@
+               "privateAssets": "all"
+             }
+           },
+-          "runtimeIdentifierGraphPath": "C:\\Users\\flyde\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
++          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+         }
+       }
+     }

@@ -1,0 +1,44 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1" date="1679386919733" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 21/03/2023 09:21 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache" />
+    <option name="AFTER_PATH" value="BatailleNavale/obj/Debug/net7.0/BatailleNavale.genruntimeconfig.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1/BatailleNavale.genruntimeconfig.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/obj/Debug/net7.0/apphost.exe" />
+    <option name="AFTER_PATH" value="BatailleNavale/obj/Debug/net7.0/apphost.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1/apphost.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" />
+    <option name="AFTER_PATH" value="BatailleNavale/bin/Debug/net7.0/BatailleNavale.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1/BatailleNavale.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" />
+    <option name="AFTER_PATH" value="BatailleNavale/bin/Debug/net7.0/BatailleNavale.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1/BatailleNavale.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="BatailleNavale/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1/project.nuget.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache" />
+    <option name="AFTER_PATH" value="BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.CoreCompileInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1/BatailleNavale.csproj.CoreCompileInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/bin/Debug/net7.0/BatailleNavale.exe" />
+    <option name="AFTER_PATH" value="BatailleNavale/bin/Debug/net7.0/BatailleNavale.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1/BatailleNavale.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" />
+    <option name="AFTER_PATH" value="BatailleNavale/obj/Debug/net7.0/BatailleNavale.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_03_2023_09_21_[Changes]1/BatailleNavale.assets.cache" />
+  </binary>
+</changelist>

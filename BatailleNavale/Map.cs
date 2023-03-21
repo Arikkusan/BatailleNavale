@@ -99,7 +99,14 @@ public class Map
         }
         else
         {
-            Console.Write("│   ");
+            if (_boatMap[i, j].isTouched)
+            {
+                Console.Write("│ X ");
+            }
+            else
+            {
+                Console.Write("│   ");
+            }
         }
     }
 
