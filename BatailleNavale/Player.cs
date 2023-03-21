@@ -124,6 +124,8 @@ public class Player
                         z = 0;
                         listDirect.Add(direction.Haut);
                         direct = direction.Rien;
+                        x2 = x;
+                        y2 = y;
                     }
 
                     break;
@@ -157,6 +159,8 @@ public class Player
                         z = 0;
                         listDirect.Add(direction.Bas);
                         direct = direction.Rien;
+                        x2 = x;
+                        y2 = y;
                     }
 
                     break;
@@ -190,6 +194,8 @@ public class Player
                         z = 0;
                         listDirect.Add(direction.Droite);
                         direct = direction.Rien;
+                        x2 = x;
+                        y2 = y;
                     }
 
                     break;
@@ -224,6 +230,8 @@ public class Player
                         z = 0;
                         listDirect.Add(direction.Gauche);
                         direct = direction.Rien;
+                        x2 = x;
+                        y2 = y;
                     }
 
                     break;
