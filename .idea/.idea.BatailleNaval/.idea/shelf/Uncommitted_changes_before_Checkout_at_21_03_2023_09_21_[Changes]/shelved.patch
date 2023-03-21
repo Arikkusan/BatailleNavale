@@ -1,0 +1,50 @@
+Index: BatailleNavale/obj/project.assets.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"version\": 3,\r\n  \"targets\": {\r\n    \"net7.0\": {}\r\n  },\r\n  \"libraries\": {},\r\n  \"projectFileDependencyGroups\": {\r\n    \"net7.0\": []\r\n  },\r\n  \"packageFolders\": {\r\n    \"C:\\\\Users\\\\flyde\\\\.nuget\\\\packages\\\\\": {},\r\n    \"C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\Shared\\\\NuGetPackages\": {}\r\n  },\r\n  \"project\": {\r\n    \"version\": \"1.0.0\",\r\n    \"restore\": {\r\n      \"projectUniqueName\": \"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\BatailleNavale.csproj\",\r\n      \"projectName\": \"BatailleNavale\",\r\n      \"projectPath\": \"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\BatailleNavale.csproj\",\r\n      \"packagesPath\": \"C:\\\\Users\\\\flyde\\\\.nuget\\\\packages\\\\\",\r\n      \"outputPath\": \"C:\\\\Users\\\\flyde\\\\Desktop\\\\IUT\\\\Projet\\\\Exos\\\\Exo1___\\\\BatailleNavale\\\\BatailleNavale\\\\obj\\\\\",\r\n      \"projectStyle\": \"PackageReference\",\r\n      \"fallbackFolders\": [\r\n        \"C:\\\\Program Files (x86)\\\\Microsoft Visual Studio\\\\Shared\\\\NuGetPackages\"\r\n      ],\r\n      \"configFilePaths\": [\r\n        \"C:\\\\Users\\\\flyde\\\\AppData\\\\Roaming\\\\NuGet\\\\NuGet.Config\",\r\n        \"C:\\\\Program Files (x86)\\\\NuGet\\\\Config\\\\Microsoft.VisualStudio.FallbackLocation.config\",\r\n        \"C:\\\\Program Files (x86)\\\\NuGet\\\\Config\\\\Microsoft.VisualStudio.Offline.config\"\r\n      ],\r\n      \"originalTargetFrameworks\": [\r\n        \"net7.0\"\r\n      ],\r\n      \"sources\": {\r\n        \"C:\\\\Program Files (x86)\\\\Microsoft SDKs\\\\NuGetPackages\\\\\": {},\r\n        \"https://api.nuget.org/v3/index.json\": {}\r\n      },\r\n      \"frameworks\": {\r\n        \"net7.0\": {\r\n          \"targetAlias\": \"net7.0\",\r\n          \"projectReferences\": {}\r\n        }\r\n      },\r\n      \"warningProperties\": {\r\n        \"warnAsError\": [\r\n          \"NU1605\"\r\n        ]\r\n      }\r\n    },\r\n    \"frameworks\": {\r\n      \"net7.0\": {\r\n        \"targetAlias\": \"net7.0\",\r\n        \"imports\": [\r\n          \"net461\",\r\n          \"net462\",\r\n          \"net47\",\r\n          \"net471\",\r\n          \"net472\",\r\n          \"net48\",\r\n          \"net481\"\r\n        ],\r\n        \"assetTargetFallback\": true,\r\n        \"warn\": true,\r\n        \"frameworkReferences\": {\r\n          \"Microsoft.NETCore.App\": {\r\n            \"privateAssets\": \"all\"\r\n          }\r\n        },\r\n        \"runtimeIdentifierGraphPath\": \"C:\\\\Users\\\\flyde\\\\.dotnet\\\\sdk\\\\7.0.101\\\\RuntimeIdentifierGraph.json\"\r\n      }\r\n    }\r\n  }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BatailleNavale/obj/project.assets.json b/BatailleNavale/obj/project.assets.json
+--- a/BatailleNavale/obj/project.assets.json	
++++ b/BatailleNavale/obj/project.assets.json	
+@@ -8,24 +8,19 @@
+     "net7.0": []
+   },
+   "packageFolders": {
+-    "C:\\Users\\flyde\\.nuget\\packages\\": {},
+-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
++    "C:\\Users\\Alix Jaugey\\.nuget\\packages\\": {}
+   },
+   "project": {
+     "version": "1.0.0",
+     "restore": {
+-      "projectUniqueName": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
++      "projectUniqueName": "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
+       "projectName": "BatailleNavale",
+-      "projectPath": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
+-      "packagesPath": "C:\\Users\\flyde\\.nuget\\packages\\",
+-      "outputPath": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\obj\\",
++      "projectPath": "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
++      "packagesPath": "C:\\Users\\Alix Jaugey\\.nuget\\packages\\",
++      "outputPath": "D:\\Projets\\Projets - CS\\BatailleNavale\\BatailleNavale\\obj\\",
+       "projectStyle": "PackageReference",
+-      "fallbackFolders": [
+-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+-      ],
+       "configFilePaths": [
+-        "C:\\Users\\flyde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
++        "C:\\Users\\Alix Jaugey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+       ],
+       "originalTargetFrameworks": [
+@@ -66,7 +61,7 @@
+             "privateAssets": "all"
+           }
+         },
+-        "runtimeIdentifierGraphPath": "C:\\Users\\flyde\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
++        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+       }
+     }
+   }

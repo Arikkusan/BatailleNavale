@@ -40,7 +40,7 @@ public class Player
                 AttackRIENCOULE(enemy);
                 break;
             
-            case e.COULE:
+            case e.COULE: 
                 reset();
                 if (foundBoat.Count() > 0)
                 {
@@ -236,7 +236,7 @@ public class Player
                         direct = direction.Rien;
                         x2 = x;
                         y2 = y;
-                        Console.Writeline("salut");
+                        Console.WriteLine("salut");
                     }
 
                     break;
@@ -278,7 +278,6 @@ public class Player
                 {
                     d = direction.Gauche;
                 }
-
                 break;
         }
 

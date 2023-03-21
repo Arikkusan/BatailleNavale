@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_16_03_2023_21_56_[Changes]" date="1679000235154" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Update_at_16_03_2023_21_56_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 16/03/2023 21:56 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/obj/project.nuget.cache" />
+    <option name="AFTER_PATH" value="BatailleNavale/obj/project.nuget.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Update_at_16_03_2023_21_56_[Changes]/project.nuget.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="BatailleNavale/obj/Debug/net7.0/BatailleNavale.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.BatailleNaval/.idea/shelf/Uncommitted_changes_before_Update_at_16_03_2023_21_56_[Changes]/BatailleNavale.csproj.AssemblyReference.cache" />
+  </binary>
+</changelist>
