@@ -35,11 +35,6 @@ public class Game
     {
         bool gameFinished = false;
         string caseAttacked;
-        for (int i = 0; i < 20; i++)
-        {
-            DrawGameMap();
-            Bot.AttackAuto(User);
-        }
 
         DrawGameMap();
         while (!gameFinished)
@@ -67,6 +62,10 @@ public class Game
             if (User.nbBoat == 0 || Bot.nbBoat == 0)
             {
                 EndGame();
+            }
+            else
+            {
+                DrawGameMap();
             }
         }
     }
