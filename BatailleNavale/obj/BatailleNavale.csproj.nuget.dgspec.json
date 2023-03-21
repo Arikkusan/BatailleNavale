@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {}
+    "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\INFO-DIJ\\BUT-INFO-DIJ-1\\ab639488\\Semestre 2\\R2_01 - Développement orienté objets\\Test2\\BatailleNavale\\BatailleNavale.csproj": {}
   },
   "projects": {
-    "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj": {
+    "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\INFO-DIJ\\BUT-INFO-DIJ-1\\ab639488\\Semestre 2\\R2_01 - Développement orienté objets\\Test2\\BatailleNavale\\BatailleNavale.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
+        "projectUniqueName": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\INFO-DIJ\\BUT-INFO-DIJ-1\\ab639488\\Semestre 2\\R2_01 - Développement orienté objets\\Test2\\BatailleNavale\\BatailleNavale.csproj",
         "projectName": "BatailleNavale",
-        "projectPath": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\BatailleNavale.csproj",
-        "packagesPath": "C:\\Users\\flyde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\flyde\\Desktop\\IUT\\Projet\\Exos\\Exo1___\\BatailleNavale\\BatailleNavale\\obj\\",
+        "projectPath": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\INFO-DIJ\\BUT-INFO-DIJ-1\\ab639488\\Semestre 2\\R2_01 - Développement orienté objets\\Test2\\BatailleNavale\\BatailleNavale.csproj",
+        "packagesPath": "C:\\Users\\ab639488\\.nuget\\packages\\",
+        "outputPath": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\INFO-DIJ\\BUT-INFO-DIJ-1\\ab639488\\Semestre 2\\R2_01 - Développement orienté objets\\Test2\\BatailleNavale\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\flyde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ab639488\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,17 +49,11 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Users\\flyde\\.dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
