@@ -41,10 +41,14 @@ public class Player
                 break;
             
             case e.COULE:
-                x = foundBoat[0].X;
-                y = foundBoat[0].Y;
-                foundBoat.RemoveAt(0);
-                foundBoat.Sort();
+                reset();
+                if (foundBoat.Count() > 0)
+                {
+                    x = foundBoat[0].X;
+                    y = foundBoat[0].Y;
+                    foundBoat.RemoveAt(0);
+                    foundBoat.Sort();
+                }
                 AttackRIENCOULE(enemy);
                 break;
 
@@ -232,6 +236,7 @@ public class Player
                         direct = direction.Rien;
                         x2 = x;
                         y2 = y;
+                        Console.Writeline("salut");
                     }
 
                     break;
